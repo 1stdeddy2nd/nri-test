@@ -3,6 +3,8 @@
 :root {
   --var-primary-orange: #F89F1E;
   --var-primary-red: #E71D35;
+  --var-primary-grey: #3FC4B6;
+  --var-secondary-grey: #969696;
 }
 
 .bg-primary-orange {
@@ -11,4 +13,28 @@
 
 .bg-primary-red {
   background-color: var(--var-primary-red);
+}
+
+.text-primary-gray {
+  color: var(--var-primary-grey);
+}
+
+.text-secondary-gray {
+  color: var(--var-secondary-grey);
+}
+
+.text-primary-orange {
+  color: var(--var-primary-orange);
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-11 {
+  font-size: 11px;
 }

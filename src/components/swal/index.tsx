@@ -1,7 +1,7 @@
 import React from 'react';
 import SweetAlert from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import { Spinner } from 'react-bootstrap';
+import { Spinner } from '@chakra-ui/react';
 
 const Swal = withReactContent(SweetAlert);
 

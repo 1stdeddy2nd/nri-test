@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ChakraProvider } from '@chakra-ui/react';
 import { SwalError } from './components/swal';
 import Home from './pages/home';
 
@@ -18,7 +18,9 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />
+      <ChakraProvider>
+        <Home />
+      </ChakraProvider>
     </QueryClientProvider>
   );
 }
