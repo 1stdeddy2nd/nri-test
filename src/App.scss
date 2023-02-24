@@ -1,0 +1,14 @@
+@import '~font-awesome/css/font-awesome.min.css';
+
+:root {
+  --var-primary-orange: #F89F1E;
+  --var-primary-red: #E71D35;
+}
+
+.bg-primary-orange {
+  background-color: var(--var-primary-orange);
+}
+
+.bg-primary-red {
+  background-color: var(--var-primary-red);
+}
