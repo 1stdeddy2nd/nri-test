@@ -7,6 +7,13 @@
   --var-secondary-grey: #969696;
 }
 
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
 .bg-primary-orange {
   background-color: var(--var-primary-orange);
 }

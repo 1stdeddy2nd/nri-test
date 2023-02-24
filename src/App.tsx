@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.scss';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import { SwalError } from './components/swal';
 import Home from './pages/home';
+import { Header } from './components/header';
 
 function App() {
   const queryClient = new QueryClient({
@@ -19,7 +20,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider>
-        <Home />
+        <Header />
+        <Container paddingTop={{ base: 160, sm: 140 }} paddingBottom={4} maxW="container.lg">
+          <Home />
+        </Container>
       </ChakraProvider>
     </QueryClientProvider>
   );
