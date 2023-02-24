@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 export interface GetPhotosData {
     page?: number;
@@ -14,7 +14,8 @@ export interface GetPhotosRes {
     url: string;
 }
 
-export const getPhotos = (data: GetPhotosData): Promise<AxiosResponse<GetPhotosRes[]>> => {
+export const getPhotos = (data: GetPhotosData): Promise<GetPhotosRes[]> => {
   const { page = 0, pageSize = 5, search = '' } = data;
-  return axios.get<GetPhotosRes[]>(`https://jsonplaceholder.typicode.com/photos?_start=${page}&_limit=${pageSize}&title_like=${search}`);
+  return axios.get<GetPhotosRes[]>(`https://jsonplaceholder.typicode.com/photos?_start=${page}&_limit=${pageSize}&title_like=${search}`)
+    .then((x) => x.data);
 };

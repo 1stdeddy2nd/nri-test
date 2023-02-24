@@ -5,32 +5,22 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosMail } from 'react-icons/io';
 import React from 'react';
 import { Icons } from '../icons';
-import imgProfile from '../../assets/img/profile.jpg';
 import styles from './style.module.scss';
 
-export const Header = () => {
-  // handle scroll
-  const [position, setPosition] = React.useState(window.pageYOffset);
-  const [visible, setVisible] = React.useState(true);
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const moving = window.pageYOffset;
+interface HeaderProps {
+  onClickSortMenu?: React.MouseEventHandler<SVGSVGElement>;
+  isVisible?: boolean
+}
 
-      setVisible(position > moving);
-      setPosition(moving);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return (() => {
-      window.removeEventListener('scroll', handleScroll);
-    });
-  });
+export const Header = (props: HeaderProps) => {
+  const { onClickSortMenu, isVisible } = props;
 
   return (
-    <header className={visible ? styles.visible : styles.hidden}>
+    <header className={isVisible ? styles.visible : styles.hidden}>
       <Container paddingTop={4} maxW="container.lg">
         <Flex alignItems="start" gap={2} marginBottom={4} justifyContent="space-between">
           <Flex gap={4}>
-            <Image src={imgProfile} alt="profile" width={100} height={100} marginTop={1} borderRadius="full" />
+            <Image src="/img/profile.jpg" alt="profile" width={100} height={100} marginTop={1} borderRadius="full" />
             <Flex justifyContent="center" flexDirection="column">
               <Text fontSize="2xl" fontWeight="bold">
                 Melanie Tan&nbsp;
@@ -51,7 +41,7 @@ export const Header = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Icons.Sort width={30} style={{ marginTop: 10 }} />
+          <Icons.Sort width={30} style={{ marginTop: 10 }} onClick={onClickSortMenu} role="button" />
         </Flex>
       </Container>
     </header>

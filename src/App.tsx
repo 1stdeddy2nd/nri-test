@@ -3,17 +3,16 @@ import './App.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ChakraProvider, Container } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { SwalError } from './components/swal';
 import Home from './pages/home';
-import { Header } from './components/header';
 
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
         refetchOnWindowFocus: false,
-        retry: 2,
+        retry: 3,
         onError: (err: any) => SwalError(err.message),
       },
     },
@@ -22,10 +21,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider>
-        <Header />
-        <Container paddingTop={{ base: 160, sm: 140 }} paddingBottom={4} maxW="container.lg">
-          <Home />
-        </Container>
+        <Home />
+        <div className="bottomHeavenLight" />
       </ChakraProvider>
     </QueryClientProvider>
   );

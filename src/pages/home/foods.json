@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Food 1 : Sunt qui excepturi placeat culpa",
+    "url": "/img/food-1.png"
+  },
+  {
+    "id": 2,
+    "title": "Food 2 : Lorem Ipsum is that it has a more-or-less normal distribution",
+    "url": "/img/food-2.png"
+  },
+  {
+    "id": 3,
+    "title": "Food 3 : Various versions have evolved over the years",
+    "url": "/img/food-3.png"
+  },
+  {
+    "id": 4,
+    "title": "Food 4 : Handful of model sentence structures, to generate",
+    "url": "/img/food-4.png"
+  },
+  {
+    "id": 5,
+    "title": "Food 5 : Chunk of Lorem Ipsum used since the 1500s is reproduced",
+    "url": "/img/food-5.png"
+  }
+]

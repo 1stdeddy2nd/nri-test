@@ -46,3 +46,9 @@ header {
 .fz-11 {
   font-size: 11px;
 }
+
+.triple-dot {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
