@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ChakraProvider, Container } from '@chakra-ui/react';
 import { SwalError } from './components/swal';
